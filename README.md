@@ -11,7 +11,7 @@
 ## 開発環境
 
 - Ruby 2.6.6
-- Rails 6.0.3.2
+- Rails 6.0.3.4
 - PostgreSQL
 
 Rails, PostgreSQLの環境構築が済まされていることが前提となります。まだの方は，逆転教材を参考に環境構築をお願いいたします。
@@ -36,20 +36,19 @@ git clone リポジトリURL
 
 - 作成したRailsアプリのディレクトリに`cd`コマンドで移動
 
-- gem をアプリ内にインストールする設定を行った上で `bundle install`を実行
+- gem をアプリ内にインストールする設定を行った上で `bundle install` を実行
 
 ```bash
-bundle config set path "vendor/bundle" --local
+bundle config set path vendor/bundle --local
 bundle install
 ```
 
-- `package.json` にリスト化されている全ての依存関係を `node_modules` 内にインストール
+- 次のコマンドで `package.json` にリスト化されている全ての依存関係を `node_modules` 内にインストール
   - `Rails 6` のアプリをクローンした場合は必須です
 
 ```
 yarn install --check-files
 ```
-
 
 - データベースを作成
 
@@ -71,10 +70,11 @@ git checkout -b feature/crud-for-tasks
 なお，クローンをした時点で `.git` ディレクトリが作成され，`origin` が設定されております。次のコマンドは***不要***です。
 
 ```bash
-# 次は実行しないこと
+# 次は実行不要
 git init
 git remote add origin リポジトリURL
 ```
+
 ## 2. 実装
 
 - テキスト教材「resources を使ったCRUD処理の実装」を参考に，担当箇所の CRUD 処理を全て実装して下さい。
@@ -104,7 +104,7 @@ git push origin HEAD
 
 - プルリクを出す
   - プルリクを出す際，「タイトル」と「概要」を書くようにして下さい。日本語でOKです。
-  - 「概要」では「（そのブランチ全体の）内容」「参考資料」を記載して下さい。Markdown形式で記述できます。
+  - 「概要」ではサンプル定型文に沿って記載して下さい。Markdown形式で記述できます。不要な文言は削除して下さい。
   - コードの差分（変更内容）は GitHubから確認できます。コードレベルの実装内容を書くのではなく，何を実装したかが伝わりやすいようにまとめましょう。
   - 「レビューをお願いします」などはGitHubに書かないこと
 
