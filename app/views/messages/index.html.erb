@@ -5,7 +5,7 @@
   <p>
     <%= message.title %>
     <%= link_to("詳細",message_path(message))%>
-    <%= link_to("編集",message_path(message), method: :patch)%> 
+    <%= link_to("編集",edit_message_path(message))%> 
     <%= link_to("削除",message_path(message), method: :delete)%> 
   </p>
 
