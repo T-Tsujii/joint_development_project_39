@@ -1,0 +1,15 @@
+<h1>メッセージ 一覧</h1>
+
+<%= link_to("投稿画面へ",new_message_path)%>
+<% @messages.each do |message| %>
+  <p>
+    <%= message.title %>
+    <%= link_to("詳細",message_path(message))%>
+    <%= link_to("編集",message_path(message), method: :patch)%> 
+    <%= link_to("削除",message_path(message), method: :delete)%> 
+  </p>
+
+<% end %>
+
+
+
