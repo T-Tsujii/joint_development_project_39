@@ -4,9 +4,9 @@
 <% @messages.each do |message| %>
   <p>
     <%= message.title %>
-    <%= link_to("詳細",message_path(message))%>
-    <%= link_to("編集",edit_message_path(message))%> 
-    <%= link_to("削除",message_path(message), method: :delete)%> 
+    <%= link_to "詳細",message_path(message)%>
+    <%= link_to "編集",edit_message_path(message)%> 
+    <%= link_to "削除",message_path(message), method: :delete, data: {confirm: "削除しますか?"} %> 
   </p>
 
 <% end %>
