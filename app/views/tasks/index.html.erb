@@ -7,8 +7,8 @@
       <br>
       <div>
         <%= task.title %>
-          <a><%= link_to "詳細", task%></a>
-          <a><%= link_to "編集" %></a>
+          <a><%= link_to "詳細", task %></a>
+          <a><%= link_to "編集", edit_task_path(task) %></a>
           <a><%= link_to "削除" %></a>
       </div>
     <% end %>
