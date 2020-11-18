@@ -1,0 +1,9 @@
+<h1>タスク 編集</h1>
+<%= form_with model: @task, local: true do |form| %>
+  <p>タイトル：<%= form.text_field :title %></p>
+  <p>内容：<%= form.text_field :content %></p>
+<div>
+  <%= form.submit "送信" %>
+</div>
+<% end %>
+<%= link_to "一覧画面へ", "/tasks", class: "list" %>
