@@ -1,0 +1,16 @@
+<h1>タスク 一覧</h1>
+  <%= link_to "投稿画面へ", "/tasks/new", class: "list" %>
+<table>
+  <tbody>
+      <br>
+    <% @tasks.each do |task| %>
+      <br>
+      <div>
+        <%= task.title %>
+          <a><%= link_to "詳細", task %></a>
+          <a><%= link_to "編集", edit_task_path(task) %></a>
+          <a><%= link_to "削除", task_path(task), method: :delete, data: { confirm: "削除しますか?" } %></a>
+      </div>
+    <% end %>
+  </tbody>
+</table>
